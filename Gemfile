@@ -2,8 +2,11 @@ source 'https://rubygems.org'
 
 gem 'devise'
 gem 'simple_form'
+group :production, :staging do
+  gem "pg"
+end
 group :development, :test do
-	gem 'sqlite3'
+  gem "sqlite3"
 end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.2'
